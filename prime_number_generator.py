@@ -3,13 +3,16 @@
 import math
 import os
 
-desiredCount = 1000000
+desiredCount = 10001000
 if os.path.exists("primes.txt"):
     with open("primes.txt","r") as f:
         primes = [int(x.strip()) for x in f.readlines()]
 else:
     primes = [2,3]
 n = primes[-1] + 2 #current number being tested
+if len(primes) >= desiredCount:
+    print("Already done!")
+    exit(0)
 while len(primes) < desiredCount:
     isPrime = True
     n_sqrt = int(math.sqrt(n))
