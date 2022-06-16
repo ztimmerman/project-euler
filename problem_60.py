@@ -4,7 +4,7 @@
 from functools import reduce
 import time
 
-with open("primes.txt",'r') as f:
+with open("primes_utm.txt",'r') as f:
     primes_str_l = [x.strip() for x in f.readlines()]
 
 #Speedhack: remove 2 and 5 as they will never produce a prime pair set
