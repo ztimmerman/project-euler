@@ -1,10 +1,15 @@
 #basic prime number generator, writes to primes.txt
 
 import math
+import os
 
 desiredCount = 1000000
-primes = [2,3]
-n = 5 #current number being tested
+if os.path.exists("primes.txt"):
+    with open("primes.txt","r") as f:
+        primes = [int(x.strip()) for x in f.readlines()]
+else:
+    primes = [2,3]
+n = primes[-1] + 2 #current number being tested
 while len(primes) < desiredCount:
     isPrime = True
     n_sqrt = int(math.sqrt(n))
