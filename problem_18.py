@@ -1,0 +1,1 @@
+#Problem 18, solve a triangle
